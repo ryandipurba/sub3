@@ -1,8 +1,11 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+import '../styles/content.css';
+import '../styles/header.css';
 import '../styles/main.css';
 import '../styles/responsive.css';
+import '../styles/spinner.css';
 import registerServiceWorker from './utils/sw-register';
 import App from './views/app';
 

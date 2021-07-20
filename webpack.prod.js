@@ -2,7 +2,7 @@
 const { merge } = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const common = require('./webpack.common');
@@ -54,7 +54,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new ImageminWebpackPlugin({
+    new ImageminWebpWebpackPlugin({
       plugins: [
         ImageminMozjpeg({
           quality: 50,
@@ -63,8 +63,8 @@ module.exports = merge(common, {
       ],
     }),
     new BundleAnalyzerPlugin({
-      analyzerMode: "static",
-      openAnalyzer: false
+      analyzerMode: 'static',
+      openAnalyzer: false,
     }),
   ],
 });

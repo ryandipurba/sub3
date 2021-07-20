@@ -1,4 +1,7 @@
 @media screen and (max-width: 579px){
+  .hero{
+    background-image: url('../public/images/hero-image-small.jpg');
+  }
   .nav--active {
   transform: translateY(0);
   z-index: -1;
@@ -9,6 +12,9 @@
 }
 
 @media screen and (min-width: 580px) {
+  .hero{
+    background-image: url('../public/images/hero-image-small.jpg');
+  }
   .nav__toggle {
     display: none;
   }
